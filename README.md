@@ -1,8 +1,8 @@
 # Automated Self-Supervised Learning for Recommendation
 
-This repository contains pyTorch implementation by <a href='https://github.com/akaxlh' target='_blank'>@akaxlh</a> for AutoCF model proposed in the following paper:
+This repository contains pyTorch implementation by <a href='https://github.com/akaxlh' target='_blank'>@akaxlh</a> for AutoCF model proposed in the paper below. Also, you can go to <a href='https://github.com/HKUDS/AutoCF'>github repo of our group</a>.
 
-><a href='https://akaxlh.github.io/' target='_blank'>Lianghao Xia</a>, <a href='https://sites.google.com/view/chaoh' target='_blank'>Chao Huang</a>, Chunzhen Huang, Kangyi Lin, Tao Yu and Ben Kao. <i>Automated Self-Supervised Learning for Recommendation</i>. In WWW'23, Austin, US, April 30 - May 4, 2023.
+><a href='https://akaxlh.github.io/' target='_blank'>Lianghao Xia</a>, <a href='https://sites.google.com/view/chaoh' target='_blank'>Chao Huang</a>, Chunzhen Huang, Kangyi Lin, Tao Yu and Ben Kao. <i>Automated Self-Supervised Learning for Recommendation</i>, <a href='https://arxiv.org/abs/2303.07797'>Paper in Arxiv</a>. In WWW'23, Austin, US, April 30 - May 4, 2023.
 
 ## Introduction
 To improve the representation quality over limited labeled data, contrastive learning has attracted attention in recommendation and benefited graph-based CF model recently. However, the success of most contrastive methods heavily relies on manually generating effective contrastive views for heuristic-based data augmentation. This does not generalize across different datasets and downstream recommendation tasks, which is difficult to be adaptive for data augmentation and robust to noise perturbation. As shown in the figure below, state-of-the-art SSL methods (e.g. NCL, SimGCL) present severe performance drop in comparison to our AutoCF, facing high-ratio noises and long-tail data distributions.
@@ -36,7 +36,7 @@ The implementation for AutoCF is under the following development environment:
 * scipy=1.7.3
 
 ## Datasets
-We utilize three datasets for evaluating SimRec: <i>Yelp, Gowalla, </i>and <i>Amazon</i>. Note that compared to the data used in our previous works, in this work we utilize a more sparse version of the three datasets, to increase the difficulty of recommendation task. Our evaluation follows the common implicit feedback paradigm. The datasets are divided into training set, validation set and test set by 70:5:25.
+We utilize three datasets for evaluating AutoCF: <i>Yelp, Gowalla, </i>and <i>Amazon</i>. Note that compared to the data used in our previous works, in this work we utilize a more sparse version of the three datasets, to increase the difficulty of recommendation task. Our evaluation follows the common implicit feedback paradigm. The datasets are divided into training set, validation set and test set by 70:5:25.
 | Dataset | \# Users | \# Items | \# Interactions | Interaction Density |
 |:-------:|:--------:|:--------:|:---------------:|:-------:|
 |Yelp   |$42,712$|$26,822$|$182,357$|$1.6\times 10^{-4}$|
